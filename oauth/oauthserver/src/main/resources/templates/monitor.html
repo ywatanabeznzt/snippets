@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Hello Thymeleaf</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
+<body>
+<table class="striped">
+  <thead>
+  <tr>
+    <th>Key</th>
+    <th>Value</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="header : ${headers}">
+    <td th:text="${header.getKey()}"></td>
+    <td th:text="${header.getValue()}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

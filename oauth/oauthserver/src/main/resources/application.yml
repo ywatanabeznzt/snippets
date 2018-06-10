@@ -1,0 +1,15 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password: null
+  datasource:
+    url: jdbc:mysql://localhost:3306/example
+    username: test
+    password: test
+    driver-class-name: com.mysql.jdbc.Driver
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
